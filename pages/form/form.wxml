@@ -1,0 +1,23 @@
+<!--pages/form/form.wxml-->
+<view class='banner'>
+  <view>
+    <image bindtap="bindViewTap" src="{{userInfo.avatarUrl}}"></image>
+  </view>
+  <view class='banner-text'>What's Your FML?</view>
+</view>
+
+<view class='form-container'>
+<form bindsubmit="bindFormSubmit">
+  <view>
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title"/>
+  </view> 
+    <view>
+    <label for="story">Story:</label>
+    <input type="text" id="story" name="story"/>
+  </view> 
+  <!-- Refer to the Github repository above if you want the complete form -->
+  <button type="primary" form-type="submit">Send</button>
+ </form>
+</view>
+

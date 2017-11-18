@@ -1,21 +1,106 @@
 /**index.wxss**/
-.userinfo {
+page, .card, .profilepic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content{
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
+html {
+  height: 100%;
+}
+
+page {
+  width: 100%;
+  min-height: 100%;
+  font-size: 24rpx;
+  overflow: hidden;
+}
+
+.content {
+  position: relative;
+  animation: animatop 0.9s cubic-bezier(0.425, 1.14, 0.47, 1.125) forwards;
+}
+
+.card {
+  width: 85%;
+  min-height: 200rpx;
+  padding: 40rpx;
+  border-radius: 2px;
+  background-color: white;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  margin: 15rpx 0;
+}
+.card:after {
+  content: '';
+  display: block;
+  width: 320rpx;
+  height: 600rpx;
+  background: #3babdf;
+  position: absolute;
+  animation: rotatemagic 0.75s cubic-bezier(0.425, 1.04, 0.47, 1.105) 1s both;
+}
+
+.profilepic {
+  flex-direction: row;
+  z-index: 2;
+  position: relative;
+}
+.profilepic image {
   border-radius: 50%;
+  width: 150rpx;
+  height: 150rpx;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.profilepic .fml {
+  padding: 0rpx 40rpx;
+}
+.profilepic .fml .h1 {
+  font-size: 1.8em;
 }
 
-.usermotto {
-  margin-top: 200px;
+.profilepic .fml text {
+  padding: 20rpx 0px;
+  color: #5A5A5A;
+  line-height: 1.2;
+  font-style: initial;
+}
+
+@keyframes animatop {
+  0% {
+    opacity: 0;
+    bottom: -1000rpx;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0px;
+  }
+}
+@keyframes animainfos {
+  0% {
+    bottom: 20rpx;
+  }
+  100% {
+    bottom: -82rpx;
+  }
+}
+@keyframes rotatemagic {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg);
+    top: -42rpx;
+    left: -506rpx;
+  }
+  100% {
+    transform: rotate(-30deg);
+    top: -42rpx;
+    left: -156rpx;
+  }
 }

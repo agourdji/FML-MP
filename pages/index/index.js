@@ -7,7 +7,8 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    fml: [{ title: 'Oops.', story: 'Today, within 24 hours at my new security job, I accidentally tasered the head of security in the groin, causing him to piss himself. FML'}]
   },
   //事件处理函数
   bindViewTap: function() {

@@ -1,12 +1,32 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/form/form"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "FML",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "backgroundColor": "#FFFFFE",
+    "borderStyle": "#D3D3D3",
+    "selectedColor": "#3BABDF",
+    "color": "#131313",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "FML",
+        "iconPath": "images/dice.png",
+        "selectedIconPath": "images/dice-selected.png"
+      },
+      {
+        "pagePath": "pages/form/form",
+        "text": "Submit Your Own",
+        "iconPath": "images/icon-submit.png",
+        "selectedIconPath": "images/submit-selected.png"
+      }
+    ]
   }
 }

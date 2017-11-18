@@ -1,0 +1,19 @@
+/* pages/form/form.wxss */
+image {
+  border-radius: 50%;
+  border: solid white 3px;
+  width: 150rpx;
+  height: 150rpx;
+}
+.banner{
+  height: 300rpx;
+  width: 100%;
+  padding: 20rpx;
+  background-color: #3babdf;
+  color: white;
+  font-weight: bold;
+  font-size: 50rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
