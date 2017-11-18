@@ -1,12 +1,12 @@
 <!--index.wxml-->
 <view class="content">
-  <view class="card">
-    <view class="profilepic">
-      <view>
-        <image bindtap="bindViewTap" src="{{userInfo.avatarUrl}}"></image>
-      </view>
-      <view class="fml">
-        <view wx:for="{{fml}}" wx:for-item="fml">
+  <view wx:for="{{fmls}}" wx:for-item="fml">
+    <view class="card">
+      <view class="profilepic">
+        <view>
+          <image bindtap="bindViewTap" src="{{fml.img}}"></image>
+        </view>
+        <view class="fml">
           <view class='h1 title'>{{fml.title}}</view>
           <view class="story">{{fml.story}}</view>
         </view>

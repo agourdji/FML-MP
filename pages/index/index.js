@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
+const AV = require('../../libs/av-weapp-min.js');
 
 Page({
   data: {
@@ -8,7 +9,7 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    fml: [{ title: 'Oops.', story: 'Today, within 24 hours at my new security job, I accidentally tasered the head of security in the groin, causing him to piss himself. FML'}]
+    fmls: []
   },
   //事件处理函数
   bindViewTap: function() {
@@ -51,5 +52,12 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  onReady: function () {
+    new AV.Query('fml')
+      .descending('createdAt')
+      .find()
+      .then(fmls => this.setData({ fmls }))
+      .catch(console.error);
   }
 })

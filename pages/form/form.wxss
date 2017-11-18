@@ -17,3 +17,22 @@ image {
   justify-content: space-around;
   align-items: center;
 }
+.form-container{
+  background-color: lightgray;
+  width: 80%;
+  padding: 30rpx;
+  border-radius: 3px;
+}
+
+.story{
+  height: 300rpx;
+}
+
+input {
+  margin: 20rpx 0;
+  border: solid white 1px;
+}
+
+.container {
+  padding: 40rpx 0;
+}

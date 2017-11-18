@@ -1,13 +1,13 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/form/form"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "FML",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "backgroundColor": "#FFFFFE",
