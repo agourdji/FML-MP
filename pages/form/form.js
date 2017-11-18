@@ -1,5 +1,7 @@
 // pages/form/form.js
 const app = getApp()
+const AV = require('../../libs/av-weapp-min.js');
+const Fml = require('../../model/fml.js');
 Page({
   /**
    * 页面的初始数据
@@ -13,10 +15,28 @@ Page({
   // Form Submission
   bindFormSubmit: function (e) {
     // Local storage
+    console.log(e)
     var review = e.detail.value.review
     // ...
-  },
 
+    // Leancloud permissions
+    var acl = new AV.ACL();
+    acl.setPublicReadAccess(true);
+    acl.setPublicWriteAccess(true);
+
+    // Leancloud storage
+    setTimeout(function () {
+      new Fml({
+        review: review
+        // ...
+      }).setACL(acl).save().catch(console.error);
+
+      // Redirect user
+      wx.reLaunch({
+        url: '/pages/index/index'
+      });
+    }, 2000);
+  },
   /**
    * 生命周期函数--监听页面加载
    */
